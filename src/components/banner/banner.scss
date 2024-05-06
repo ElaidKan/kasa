@@ -1,0 +1,41 @@
+.banner {
+    width: 100%;
+    height: 111px;
+    border: 1px solid black;
+    border-radius: 10px;
+    opacity: 0.6;
+    background: #000;
+    mix-blend-mode: darken;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+
+    @media screen and (min-width: 768pxpx) {
+        height: 223px;
+        border-radius: 25px;
+    }
+}
+
+.imgBanner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border-radius: 10px;
+
+    @media screen and (min-width: 768pxpx) {
+        border-radius: 25px;
+    }
+}
+
+.textBanner {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    position: relative;
+    text-align: center;
+    top: 40px;
+    font-size: 24px;
+
+    @media screen and (min-width: 768pxpx) {
+        font-size: 48px;
+    }
+}

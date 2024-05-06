@@ -1,14 +1,17 @@
-function navbar() {
-  return (
-    <div>
-        <img src="kasa-logo.png" alt="logo" />
-        <ul>
-            <li>Accueil</li>
-            <li>A propos</li>
-        </ul>
+import { NavLink } from "react-router-dom"
+import './navbar.scss'
 
-    </div>
+function Navbar() {
+  return (
+
+    <nav className="navbar">
+      <img src="./public/logo.png" className="logo" alt="logo" />
+      <div className="links">
+        <NavLink to="/" className={({ isActive }) => `${isActive && "link"}`}>ACCUEIL</NavLink>
+        <NavLink to="/about" className={({ isActive }) => `${isActive && "link"}`}>A PROPOS</NavLink>
+      </div>
+    </nav>
   )
 }
 
-export default navbar
+export default Navbar
