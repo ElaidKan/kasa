@@ -1,0 +1,24 @@
+@import '../Styles/Utils/variables.scss'; 
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: $primary-color;
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 30px;
+    color: $primary-color;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+    text-decoration: underline;
+}

@@ -1,15 +1,15 @@
-import Banner from "../../components/Banner/banner";
 import Footer from "../../components/Footer/footer";
-import Erreur from "../../components/Erreur404/erreur";
-import './error.scss'
+import Error from "../../components/Error/error";
+// import './errorpage.scss'
 
-function Error() {
+
+function Errorpage() {
     return (
         <div>
-            <Banner />
+            <Error />
             <Footer />
-            <Erreur />
+
         </div>
     )
 }
-export default Error
+export default Errorpage

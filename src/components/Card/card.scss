@@ -1,5 +1,4 @@
 .cardContainer {
-    position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -12,7 +11,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         width: 340px;
-        height: 340px;
         flex-direction: row;
         margin: 20px;
 
@@ -20,6 +18,7 @@
 }
 
 .card {
+    position: relative;
     width: 340px;
     height: 340px;
     border-radius: 10px;
@@ -35,11 +34,14 @@
 }
 
 .title {
+    position: absolute;
     font-size: 12px;
     color: white;
     margin-top: 10px;
 
     @media screen and (min-width: 768px) {
         font-size: 24px;
+        bottom: 1px;
+        transform: translateY(20%);
     }
 }

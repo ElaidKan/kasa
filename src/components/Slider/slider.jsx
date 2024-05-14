@@ -1,12 +1,18 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
+// import logementData from '../../data/logements.json'
 
-function Slider() {
-  return (
-    <div>
+// function Slider() {
+//   const images = logementData.pictures
+//   const numeroSlide = images.length
+//   return (
 
-    </div>
-  )
-}
+//     <div>
+//       {images.map((image, index) => (
+//         <img key={index} src={image} alt= {logementData.title}/>
+//       ))}
+//     </div>
 
-export default Slider
+
+//   )
+// }
+
+// export default Slider

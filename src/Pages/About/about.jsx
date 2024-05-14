@@ -1,4 +1,4 @@
-import banner from "../../components/Banner/banner";
+import Banner from "../../components/Banner/banner";
 import Footer from "../../components/Footer/footer";
 import './about.scss'
 
