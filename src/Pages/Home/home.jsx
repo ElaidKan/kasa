@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/footer";
 function Home() {
     return (
         <>
-            <Banner />
+            <Banner text="Chez vous, partout et ailleurs" image="./public/banner.png" />
             <Card />
             <Footer />
             <div>

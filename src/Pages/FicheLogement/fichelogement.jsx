@@ -1,67 +1,37 @@
 import Footer from "../../components/Footer/footer";
 import './fichelogement.scss'
 import { useParams } from 'react-router-dom'
-import { useState } from 'react'
 import logementData from '../../data/logements.json'
-// import Slider from "../../components/Slider/slider";
-import { IoChevronDownOutline } from "react-icons/io5";
-import { FaStar } from "react-icons/fa";
+import Slider from "../../components/Slider/slider";
+import Title from "../../components/Title/title";
+import Tag from "../../components/Tag/tag";
+import Stars from "../../components/Stars/stars";
+import Profil from "../../components/Profil/profil";
+import Collaps from "../../components/Collaps/collaps";
+import List from "../../components/List/list";
 
 
 function FicheLogement() {
-    const [ouvrirDescription, setouvrirDescription] = useState(false)
-    const [ouvrirEquipement, setouvrirEquipement] = useState(false)
 
     let { idlogement } = useParams(); // Unpacking and retrieve id
     let logement = logementData.find(app => app.id === idlogement);
     return (
         <>
-            {/* <Slider /> */}
+            <Slider images={logement.pictures} alt={logement.title}/>
+
             <div>
                 <div>
-                    <div>
-                        <h1>{logement.title}</h1>
-                        <p>{logement.location}</p>
-                    </div>
-                    <div>
-                        {logement.tags.map((tag, id) => (
-                            <span key={id}>{tag}</span>
-                        ))}
-                    </div>
+                   <Title title = {logement.title} location = {logement.location}/>
+                    <Tag tags = {logement.tags}/>
                 </div>
                 <div>
-                    <div>
-                        {[...Array(5)].map((_, index) => (
-                            <FaStar key={index} className={logement.rating >= index + 1 ? 'etoilePleine' : 'etoileVide'} />
-                        ))}
-                    </div>
-                    <div>
-                        <h3>{logement.host.name}</h3>
-                        <img src={logement.host.picture} alt={logement.host.name} />
-                    </div>
+                   <Stars rating={logement.rating}/>
+                   <Profil name={logement.host.name} picture={logement.host.picture}/>
                 </div>
             </div>
             <div>
-                <div>
-                    <div onClick={() => setouvrirDescription(!ouvrirDescription)}>
-                        <h2>Description</h2>
-                        <IoChevronDownOutline className={ouvrirDescription ? 'rotate' : ''} />
-                    </div>
-                    {ouvrirDescription && <p>{logement.description}</p>}
-                </div>
-                <div>
-                    <div onClick={() => setouvrirEquipement(!ouvrirEquipement)}>
-                        <h2>Equipements</h2>
-                        <IoChevronDownOutline className={ouvrirEquipement ? 'rotate' : ''} />
-                    </div>
-                    {ouvrirEquipement && (
-                        <ul>
-                            {logement.equipments.map((equipement, id) => (
-                                <li key={id}>{equipement}</li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
+                <Collaps title="Description" description={logement.description}/>
+                <Collaps title="Equipement" description={<List equipments={logement.equipments} />} />
             </div>
             <Footer />
         </>

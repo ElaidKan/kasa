@@ -1,10 +1,10 @@
 import './banner.scss'
 
-function banner() {
+function banner({image, text}) {
     return (
         <div className='banner'>
-            <img src = './public/banner.png' className="imgBanner" alt="banner" />
-            <div className='textBanner'>Chez vous, partout et ailleurs</div>
+            <img src = {image} className="imgBanner" alt="banner" />
+            <div className='textBanner'>{text}</div>
         </div>
     )
 }
