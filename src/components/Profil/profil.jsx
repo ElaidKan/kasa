@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 function Profil({name, picture}) {
   return (
-    <div>
-    <h3>{name}</h3>
-    <img src={picture} alt={name} />
+    <div className="profil">
+    <h3 className="nameProfil">{name}</h3>
+    <img className="imgProfil" src={picture} alt={name} />
 </div>
   )
 }

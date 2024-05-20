@@ -1,0 +1,26 @@
+@import '../Styles/Utils/variables.scss';
+
+.tags {
+    display: flex;
+    gap: 10px;
+
+}
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 84px;
+    height: 18px;
+    color: $tertiary-color;
+    background-color: $primary-color;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 10px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+        width: 115px;
+        height: 25px;
+    }
+}

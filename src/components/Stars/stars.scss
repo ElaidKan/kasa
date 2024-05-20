@@ -1,7 +1,31 @@
+@import '../Styles/Utils/variables.scss';
+
+.etoiles {
+    // display: flex;
+    // gap: 5px;
+    font-size: 18px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 36px;
+
+
+    }
+}
+
 .etoilePleine {
-    fill: #0065fc!important;
+    fill: $primary-color !important;
+    margin: 2px;
+
+    @media screen and (min-width: 768px) {
+        margin: 5px;
+    }
 }
 
 .etoileVide {
-    fill: #f2f2f2!important;
+    fill: $tertiary-color !important;
+    margin: 2px;
+
+    @media screen and (min-width: 768px) {
+        margin: 5px;
+    }
 }

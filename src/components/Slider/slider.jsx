@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { FaChevronLeft } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa6";
+import './slider.scss'
 
 function Slider({ images, alt }) {
     const numeroSlide = images.length
@@ -16,19 +17,19 @@ function Slider({ images, alt }) {
     if (numeroSlide > 1) {
         slide = (
             <div>
-                <div>
-                    <FaChevronLeft onClick={slidePrecedent} />
-                    <FaChevronRight onClick={slideSuivant} />
+                <div className="sliderButton">
+                    <FaChevronLeft className="chevronGauche" onClick={slidePrecedent} />
+                    <FaChevronRight className="chevronDroit" onClick={slideSuivant} />
                 </div>
-                <div>{slideIndex + 1}/{numeroSlide}</div>
+                <div className="sliderIndex">{slideIndex + 1}/{numeroSlide}</div>
             </div>
         )
     }
 
     return (
-        <div>
+        <div className="slider">
             {images.map((image, index) => (
-                slideIndex === index && (<img key={index} src={image} alt={alt} />)
+                slideIndex === index && (<img className="imgSlider" key={index} src={image} alt={alt} />)
             ))}
 
             {slide}

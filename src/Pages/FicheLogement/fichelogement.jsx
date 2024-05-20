@@ -24,12 +24,12 @@ function FicheLogement() {
                    <Title title = {logement.title} location = {logement.location}/>
                     <Tag tags = {logement.tags}/>
                 </div>
-                <div>
+                <div className="profilStars">
                    <Stars rating={logement.rating}/>
                    <Profil name={logement.host.name} picture={logement.host.picture}/>
                 </div>
             </div>
-            <div>
+            <div className="ensembleCollaps">
                 <Collaps title="Description" description={logement.description}/>
                 <Collaps title="Equipement" description={<List equipments={logement.equipments} />} />
             </div>

@@ -1,24 +1,46 @@
-@import '../Styles/Utils/variables.scss'; 
+@import '../Styles/Utils/variables.scss';
+
 .errorContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 50px;
-}
+    height: auto;
 
-h1 {
-    color: $primary-color;
-    font-size: 100px;
-}
+    h1 {
+        color: $primary-color;
+        font-size: 100px !important;
+        font-weight: 700;
+        margin: 110px 0 0 0;
 
-h2 {
-    font-size: 30px;
-    color: $primary-color;
-}
+        @media screen and (min-width: 768px) {
+            font-size: 288px !important;
+        }
+    }
 
-p {
-    color: black;
-    font-size: 20px;
-    text-decoration: underline;
+    h2 {
+        font-size: 18px;
+        font-weight: 500;
+        color: $primary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 500;
+        color: $quaternary-color;
+        text-decoration: underline;
+        margin: 0 0 110px 0;
+
+        @media screen and (min-width: 768px) {
+            font-size: 18px;
+        }
+    }
 }

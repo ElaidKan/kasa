@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 
 function Tag({tags}) {
     return (
-        <div>
+        <div className='tags'>
             {tags.map((tag, id) => (
-                <span key={id}>{tag}</span>
+                <span className="tag" key={id}>{tag}</span>
             ))}
         </div>
     )

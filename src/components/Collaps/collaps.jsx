@@ -5,12 +5,12 @@ import { useState } from 'react'
 function Collaps({ title, description }) {
     const [ouvrirDescription, setouvrirDescription] = useState(false)
     return (
-        <div>
-            <div onClick={() => setouvrirDescription(!ouvrirDescription)}>
+        <div className='collaps'>
+            <div className='title' onClick={() => setouvrirDescription(!ouvrirDescription)}>
                 <h2>{title}</h2>
-                <IoChevronDownOutline className={ouvrirDescription ? 'rotate' : ''} />
+                <IoChevronDownOutline className={ouvrirDescription ? 'rotate chevron' : 'chevron'} />
             </div>
-            {ouvrirDescription && <span>{description}</span>}
+           <div className='description'> {ouvrirDescription && <span>{description}</span>}</div>
         </div>
     )
 }
