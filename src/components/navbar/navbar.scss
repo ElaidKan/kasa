@@ -1,19 +1,20 @@
-
+@import '../Styles/Utils/variables.scss';
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    margin-top: 20px;
-    @media screen and (min-width: 768pxpx) {
-        margin-top: 45px;
+    margin: 20px auto 27px auto;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 50px;
+        max-width: 1240px;
         
     }
 }
 
 .logo {
     width: 145px;
-    @media screen and (min-width: 768pxpx) {
+    @media screen and (min-width: 768px) {
         width: 210px;
     }
 }
@@ -22,7 +23,8 @@
     display: flex;
     gap: 26px;
     font-size: 12px;
-    @media screen and (min-width: 768pxpx) {
+    color: $quaternary-color;
+    @media screen and (min-width: 768px) {
         font-size: 24px;
         gap: 57px;
     }
@@ -30,9 +32,9 @@
 
 .link {
     text-decoration: underline;
-    // cursor: default;
+    cursor: default;
     font-size: 14px;
-    @media screen and (min-width: 768pxpx) {
+    @media screen and (min-width: 768px) {
         font-size: 28px;
         
     }

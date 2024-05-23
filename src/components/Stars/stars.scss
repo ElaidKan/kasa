@@ -1,14 +1,10 @@
 @import '../Styles/Utils/variables.scss';
 
 .etoiles {
-    // display: flex;
-    // gap: 5px;
-    font-size: 18px;
+    height: 18px;
 
     @media screen and (min-width: 768px) {
-        font-size: 36px;
-
-
+        height: 36px;
     }
 }
 

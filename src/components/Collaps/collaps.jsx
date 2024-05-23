@@ -6,7 +6,7 @@ function Collaps({ title, description }) {
     const [ouvrirDescription, setouvrirDescription] = useState(false)
     return (
         <div className='collaps'>
-            <div className='title' onClick={() => setouvrirDescription(!ouvrirDescription)}>
+            <div className='titleContainer' onClick={() => setouvrirDescription(!ouvrirDescription)}>
                 <h2>{title}</h2>
                 <IoChevronDownOutline className={ouvrirDescription ? 'rotate chevron' : 'chevron'} />
             </div>

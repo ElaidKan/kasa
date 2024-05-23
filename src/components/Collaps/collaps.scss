@@ -3,30 +3,38 @@
 .collaps {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     width: 100%;
     margin: 10px 0;
 
     h2 {
         color: $tertiary-color;
-        font-size: 24px;
+        font-size: 13px;
         font-weight: 500;
         margin: 0 10px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 22px;
+        }
     }
 
     .chevron {
-        fill: $tertiary-color !important;
-        font-size: 24px;
+        filter: invert(1);     //inverser la couleur noir/blanc
+        font-size: 16px;
         font-weight: 500;
         margin: 0 10px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 32px;
+        }
     }
 
     .rotate {
         transform: rotate(180deg);
     }
 
-    .title {
+    .titleContainer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -36,12 +44,9 @@
         background-color: $primary-color;
         border-radius: 5px;
         color: $tertiary-color !important;
-        font-size: 24px;
-        font-weight: 500;
         cursor: pointer;
 
         @media screen and (min-width: 768px) {
-            font-size: 36px;
             margin: 0;
         }
     }
@@ -50,6 +55,6 @@
         width: 100%;
         font-size: 18px;
         font-weight: 400;
-        margin: 10px 10px 0 10px;
+        padding: 10px 0 0 20px;
     }
 }

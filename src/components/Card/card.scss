@@ -8,15 +8,16 @@
     border-radius: 10px;
     margin-top: 10px;
     gap: 10px;
+    background-color: $secondary-color;
 
     @media screen and (min-width: 768px) {
-        display: grid;
         flex-direction: row;
-        grid-template-columns: 1fr 1fr 1fr;
-        width: 340px;
-        margin: 20px;
-        gap: 50px;
-        padding: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 50px 100px;
+        gap: 60px;
+        max-width: 1240px;
+        padding: 50px 0;
 
     }
 

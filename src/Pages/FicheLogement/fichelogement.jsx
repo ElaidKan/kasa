@@ -9,28 +9,34 @@ import Stars from "../../components/Stars/stars";
 import Profil from "../../components/Profil/profil";
 import Collaps from "../../components/Collaps/collaps";
 import List from "../../components/List/list";
+import Errorpage from "../Errorpage/errorpage";
+import Navbar from "../../components/Navbar/navbar";
 
 
 function FicheLogement() {
 
     let { idlogement } = useParams(); // Unpacking and retrieve id
     let logement = logementData.find(app => app.id === idlogement);
+    if (!logement) {
+        return <Errorpage />
+    }
     return (
         <>
-            <Slider images={logement.pictures} alt={logement.title}/>
+            <Navbar />
+            <Slider images={logement.pictures} alt={logement.title} />
 
-            <div>
+            <div className="information">
                 <div>
-                   <Title title = {logement.title} location = {logement.location}/>
-                    <Tag tags = {logement.tags}/>
+                    <Title title={logement.title} location={logement.location} />
+                    <Tag tags={logement.tags} />
                 </div>
                 <div className="profilStars">
-                   <Stars rating={logement.rating}/>
-                   <Profil name={logement.host.name} picture={logement.host.picture}/>
+                    <Stars rating={logement.rating} />
+                    <Profil name={logement.host.name} picture={logement.host.picture} />
                 </div>
             </div>
             <div className="ensembleCollaps">
-                <Collaps title="Description" description={logement.description}/>
+                <Collaps title="Description" description={logement.description} />
                 <Collaps title="Equipement" description={<List equipments={logement.equipments} />} />
             </div>
             <Footer />
